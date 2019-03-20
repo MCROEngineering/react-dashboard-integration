@@ -1,0 +1,80 @@
+.app-header {
+  display: flex;
+  flex-direction: row;
+  height: 3.5rem;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #c8ced3;
+  z-index: 1000;
+  position: relative;
+
+  &-left {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+
+    &--logo {
+      margin: auto 0 auto 1rem;
+
+      img {
+        width: 6rem;
+      }
+
+      @media (max-width: 991.98px) {
+        margin-left: 7rem;
+      }
+    }
+
+    &--toggler {
+      background-color: yellow;
+      width: 3rem;
+      height: 2rem;
+      margin-left: 10rem;
+      margin-top: .7rem;
+      background-color: transparent;
+      border: none;
+      position: absolute;
+
+      @media (max-width: 991.98px) {
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        & > *, *:before, *:after {
+          background-color: black;
+        }
+      }
+
+      &__icon {
+        position: relative;
+        top: -.2rem;
+
+        &,
+        &::before,
+        &::after {
+          width: 1.5rem;
+          height: 2px;
+          background-color: grey;
+          display: inline-block;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+        }
+
+        &::before {
+          top: -.4rem;
+        }
+
+        &::after {
+          top: .4rem;
+        }
+      }
+    }
+  }
+}
